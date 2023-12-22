@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact page</title>
-    <link rel="stylesheet" href="css/style.css">
- 
-  </head>
-
-  <body>
-    <header>
-      <img class="logo" src="images/images/360_F_405029055_kMGBx9LXwIxSerlc9eEY4bnBpF5X7yri.jpg" alt="logo">
-      
-      <nav>
-          <span><a href="Home.html">Home</a></span>
-          <span><a href="Aboutme.html">About</a></span>
-          <span><a href="Hobbies.html">Hobbies</a></span>
-          <span><a href="Places.html">places</a></span>
-          <span><a href="Contact.html">Contact</a></span>
-          
-      </nav>    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="flex flex-col min-h-screen">
+  <header class="flex items-center justify-between bg-black py-4 px-6">
+    <div class="flex items-center">
+      <img class="w-10 h-10 mr-2" src="images/images/logo.jpg" alt="logo">
+      <nav id="navbar" class="hidden md:flex items-center space-x-4">
+        <a class="text-white font-medium" href="Home.html">Home</a>
+        <a class="text-white font-medium" href="Aboutme.html">About</a>
+        <a class="text-white font-medium" href="Hobbies.html">Hobbies</a>
+        <a class="text-white font-medium" href="Places.html">Places</a>
+        <a class="text-white font-medium" href="Contact.html">Contact</a>
+      </nav>
+    </div>
+    <div id="hamburger" class="text-white cursor-pointer md:hidden">&#9776;</div>
   </header>
 
-
   <main class="contact">
-    <form action="/submit" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
-    
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+    <form id="contactForm" action="https://formspree.io/your-email@example.com" method="post" class="max-w-md mx-auto">
+      <label for="name" class="block">Name:</label>
+      <input type="text" id="name" name="name" required class="w-full px-4 py-2 mb-4 border rounded">
 
-        <label for="phonenumber">phoneNo:</label>
-        <input type="text" id="phonenumber" required><br>
-    
-        <label for="message"></label>
-        <textarea id="message" name="message" rows="4" required>Enter your message....</textarea><br>
+      <label for="email" class="block">Email:</label>
+      <input type="email" id="email" name="email" required class="w-full px-4 py-2 mb-4 border rounded">
 
-    
-        <button class="button" type="submit">Submit</button>
-      </form>
-    
-      
-          
-    
+      <label for="phonenumber" class="block">Phone No:</label>
+      <input type="text" id="phonenumber" name="phonenumber" required class="w-full px-4 py-2 mb-4 border rounded">
+
+      <label for="message" class="block">Message:</label>
+      <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 mb-4 border rounded">Enter your message....</textarea>
+
+      <button class="button bg-green-500 text-white px-4 py-2 rounded" type="submit">Submit</button>
+    </form>
   </main>
 
-  <footer class="footer">
-    <div class="socials">
-
-      <a href="http://instagram.com/"><img  src="images/images/download.png" alt="instagram icon">@beamliiii</a>
-      <a href="http://telegram.com/"><img  src="images/images/images.png" alt="telegram icon">@BeamlakTH</a>
-      
-  </div>
-
+  <footer class="bg-gray-300 py-4">
+    <div class="social-media flex justify-center">
+      <a href="https://t.me/BeamlakTH" target="_blank" class="flex items-center space-x-1">
+        <img src="images/images/telegram.jpg" alt="Telegram" class="w-5 h-5">
+        <span>BeamlakTH</span>
+      </a>
+      <a href="https://instagram.com/beamliiii?utm_source=qr&igshid=YzU1NGVlODEzOA%3D%3D" target="_blank" class="flex items-center space-x-1 ml-4">
+        <img src="images/images/instagram.png" alt="Instagram" class="w-5 h-5">
+        <span>beamliiii</span>
+      </a>
+    </div>
+    <p class="para text-center">&copy;my social media contacts.</p>
   </footer>
-    
-  </body>
-  </html>
+
+  <script src="script.js"></script>
+</body>
+</html>
